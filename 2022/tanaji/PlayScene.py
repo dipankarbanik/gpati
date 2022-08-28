@@ -34,6 +34,7 @@ def playscene():
     #rotateMotors(Soldiers,'forward',warLength)
     fightTanaji()
     mughalFall()
+    hoistFlag()
     waveShivaji()
     reset()
 
@@ -54,6 +55,12 @@ def mughalFall():
     sc.certSpeed([1, 7], [60, 0], [40, 60])
     time.sleep(delaytime)
 
+def hoistFlag():
+    print('Hoisting flag')
+    delaytime = 2
+    sc.certSpeed([3, 7], [60, 0], [40, 60])
+    time.sleep(delaytime)
+    
 def waveShivaji():
     waveIteration = 5;
     while waveIteration > 0:
@@ -69,6 +76,10 @@ def reset():
     print('Mughal reset...')
     delaytime = 2
     sc.certSpeed([1, 7], [0, 60], [40, 60])
+    time.sleep(delaytime+2)
+    print('Flag reset...')
+    delaytime = 2
+    sc.certSpeed([3, 7], [0, 60], [40, 60])
     time.sleep(delaytime+2)
     print("Sending tanaji back..."+str(wallHeight))
     rotateMotors(Tanaji,'backward',wallHeight)     
