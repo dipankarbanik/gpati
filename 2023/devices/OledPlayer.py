@@ -34,7 +34,7 @@ class OledPlayer:
         self.stop_playing = True
 
 if __name__ == "__main__":
-    player = OledPlayer("path_to_your_gif.gif")
+    player = OledPlayer("../picture.gif")
     try:
         player.play()
     except KeyboardInterrupt:  # Stop playback with Ctrl+C
